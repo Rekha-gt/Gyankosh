@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montagu Slab", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  margin: 15px 0 20px 0;
+  color: #211111;
+  font-weight: 500;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+button.normal {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px;
+  color: white;
+  background-color: #211111;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+button.format {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: white;
+  background-color: #21111189;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #211111;
+  outline: none;
+  transition: 0.2s;
+}
+body {
+  width: 100%;
+}
+/* header styling start */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #211111;
+  transition: 0.4s ease;
+}
+#navbar li a i {
+  font-size: 20px;
+  color: #211111;
+}
+#navbar li a i:hover,
+#navbar li a i.active {
+  color: chocolate;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: chocolate;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after,
+#navbar li a i.active::after,
+#navbar li a i:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: chocolate;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+/* Home page styling */
+#hero {
+  background-image: url(assets/img/b3.jpg);
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#hero h2 {
+  padding-bottom: 10px;
+  color: white;
+}
+#hero h2 span {
+  color: rgb(202, 140, 24);
+}
+
+#hero button {
+  background-color: rgb(36, 26, 8);
+  color: aliceblue;
+  border: 0;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+#hero button:hover {
+  background: rgb(202, 140, 24);
+  transition: 0.4s ease;
+}
+/* Features Section Styling */
+#features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#features .feature-box {
+  width: 150px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.01);
+  margin: 15px 0;
+  border: 1px solid chocolate;
+  border-radius: 5px;
+}
+#features .feature-box:hover {
+  box-shadow: 10px 10px 5 4px rgba(70, 60, 220, 0.01);
+}
+#features .feature-box img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#features .feature-box h6 {
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 5px;
+  color: #fddde4;
+  background-color: rgb(36, 26, 8);
+  cursor: pointer;
+}
+#features .feature-box h6:hover {
+  background: rgb(202, 140, 24);
+  transition: 0.4s ease;
+}
+/* Featured Books */
+#books,
+#book {
+  text-align: center;
+}
+#books .fst,
+#book .fst {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid chocolate;
+  border-radius: 25px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+#books .fst:hover,
+#book .fst:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+}
+#books .fst img,
+#book .fst img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#books .fst .description,
+#book .fst .description {
+  text-align: start;
+  padding: 10px 0;
+}
+#books .fst .description span,
+#book .fst .description span {
+  color: #211111;
+  font-size: 12px;
+}
+#books .fst .description h5,
+#book .fst .description h5 {
+  padding-top: 7px;
+  color: #211111;
+  font-size: 14px;
+}
+#books .fst .description i,
+#book .fst .description i {
+  font-size: 12px;
+  color: rgb(243, 180, 24);
+}
+#books .fst .description h4,
+#book .fst .description h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  color: chocolate;
+}
+#books .fst .down,
+#book .fst .down {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(210, 105, 30, 0.345);
+  border-radius: 50px;
+  color: chocolate;
+  border: 1px solid rgba(210, 105, 30, 0.871);
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+#books .fst-container,
+#book .fst-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url(assets/img/b4.jpg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-content {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+}
+.banner-content h2 {
+  font-size: 30px;
+  padding: 10px 0;
+  color: #211111;
+}
+#banner .normal {
+  margin-top: 15px;
+  align-self: center; /* Center the button horizontally */
+}
+#banner button:hover {
+  background-color: #df990e;
+  color: #211111;
+}
+#sm-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#sm-banner .banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(assets/img/b2.jpg);
+  min-width: 665px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+#sm-banner h4 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+}
+#sm-banner h2 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+}
+#sm-banner span {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
